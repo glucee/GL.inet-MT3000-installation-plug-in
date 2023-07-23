@@ -27,6 +27,10 @@ ssh root@192.168.8.1
 
 ![packages](packages.png)
 
+## 补充！！！！
+此时如果直接使用SCP，由于苹果或者Linux的SCP默认是sftp
+opkg install openssh-sftp-server
+
 ## 然后重新打开cmd，直接用scp命令远程上传packages文件夹到192.168.8.1的根目录下：
 
 ![scp](scp.png)
@@ -55,3 +59,6 @@ opkg install ./*
 ```
 
 最后就大功告成！！！
+
+## 补充一步：此时打开SSR Plus，加note的时候，会出现报错，可通过以下命令解决：
+opkg install luci-lib-ipkg
